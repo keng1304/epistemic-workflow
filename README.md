@@ -19,7 +19,22 @@
 
 適用範圍不限量化投資：客戶評分、專案風險、商業策略、內容成效評估——底層都是同一類問題。
 
-## 怎麼用
+## v2 — Epistemic Architect（2026-08-10 擴展）
+
+v2 把線性流程升級成**四模式 Router**，用足夠小的模式就好，不用每次跑全流程：
+
+| 模式 | 何時用 | 目標 |
+|---|---|---|
+| **DISCOVERY** | 知道目標，不知道有哪些專業方法/知識存在 | 探索解法空間 |
+| **AUDIT** | 已有框架/工作流/模型要體檢 | 找假設、盲點、proxy 問題、替代解釋 |
+| **CALIBRATION** | 出現 score / threshold / ranking / weight / 信心數字 | 判定標準有沒有 empirical / theoretical / decision 意義 |
+| **FULL ARCHITECTURE** | 建可重複使用的 Agent / Skill / 決策系統 / 評分系統 | Step 1-20 完整跑，結尾產 Execution Spec 交給執行 agent |
+
+v2 另外補了 v1 沒有的三塊：**Value of Information**（哪個缺失資訊最值得取得）、**Stop Condition**（研究何時該停——sufficient knowledge > maximum completeness）、**Execution Spec**（校準完成後交棒執行 agent 的乾淨規格）。
+
+完整規格：[epistemic-architect.md](epistemic-architect.md)（含 Anti-Patterns、Evidence Hierarchy、Internal Checklist）
+
+## 怎麼用（v1 兩檔法，仍適用日常）
 
 ### 輕檔（日常預設）
 
