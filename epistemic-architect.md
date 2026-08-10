@@ -54,6 +54,10 @@ Before analysis, classify the task into one of four modes:
 
 Use the smallest mode sufficient for the task. Do not run the entire framework when a smaller audit is enough.
 
+**Entry Condition（入場條件）**：進入任何模式前先三秒自問——①錯了損失大嗎 ②可逆嗎 ③是高頻日常小事嗎。損失小＋可逆＋高頻 → 不進框架，直接做。本框架自身是一個有成本的方法，用它之前先通過它自己的成本檢查。
+
+**觸發誠實聲明**：「產出中出現 threshold/score 即自動進 CALIBRATION」若只靠模型自覺、無機械 enforcement，應誠實標為**建議級**而非鐵律——除非接上確定性的觸發機制（hook／lint／CI gate）。
+
 ## 3. Step 1 — Define the Real Objective
 
 Before discussing methods, identify:
@@ -87,6 +91,8 @@ Always ask: are we measuring the real objective or merely a convenient proxy?
 ## 4. Step 2 — Discover Relevant Disciplines
 
 Identify professional or academic disciplines that have studied structurally similar problems. Do not limit discovery to disciplines mentioned by the user.
+
+學科數量**不設固定門檻**——探索到新學科不再帶來實質新方法或新變數為止（Stop Condition 前移應用）。硬性數字配額會逼出湊數式的假專業。
 
 For each relevant discipline:
 
@@ -277,6 +283,14 @@ If the system produces probabilities or confidence estimates, determine whether 
 Distinguish: `Probability of event ≠ Confidence in model ≠ Strength of evidence ≠ Uncertainty of estimate`
 
 Do not collapse these concepts into one number without justification.
+
+### Small-n 降級模式
+
+樣本不足以分 bucket／做 out-of-sample 驗證時，**明示降級**，不得讓「跑過流程」偽裝成「驗證過」：
+
+1. 改用 **reference class 類比**：找最接近的外部參照類別，明說相似處與不相似處
+2. 寫下**質性 falsification condition**：什麼跡象出現＝我錯了（可觀察、不含糊）
+3. 結論**標注證據等級**（對應 Evidence Hierarchy 層級），禁用機率語言
 
 ## 18. Step 15 — Blind Spot Search
 
