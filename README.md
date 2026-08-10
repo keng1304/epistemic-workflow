@@ -34,6 +34,8 @@ v2 另外補了 v1 沒有的三塊：**Value of Information**（哪個缺失資�
 
 完整規格：[epistemic-architect.md](epistemic-architect.md)（含 Anti-Patterns、Evidence Hierarchy、Internal Checklist）
 
+DISCOVERY 模式的可執行版：[discovery-protocol.md](discovery-protocol.md)——盲區探索協議（怎麼把「不知道自己不知道」變成「知道自己不知道」，含五步協議＋影像領域完整實例）
+
 ## 怎麼用（v1 兩檔法，仍適用日常）
 
 ### 輕檔（日常預設）
